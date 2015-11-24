@@ -16,7 +16,9 @@ The server is based on :term:`Spring Boot` 1.2.1. The usage is very simple, and 
 It is basically composed of the server’s configuration, and a class that implements the handler for the requests received. The following code implements
 a handler for :term:`JSON-RPC` requests, that contains a JsonObject as params data type. This handler will send back the params received to the client. Since the
 request handling always sends back a response, the library will send an automatic empty response if the programmer does not purposefully do so. In the following
-example, if the request does not invoke the echo method, it will send back an empty response::
+example, if the request does not invoke the echo method, it will send back an empty response:
+
+.. code-block:: java
 
    import org.kurento.jsonrpc.DefaultJsonRpcHandler ; 
    import org.kurento.jsonrpc.Transaction ; 
@@ -55,7 +57,9 @@ The class *DefaultJsonRpcHandler* is generified with the payload that comes with
 but it could also be a plain String, or any other object.
 
 To configure a WebSocket-based JSON-RPC server to use this handler, developers can use the dedicated JsonRpcConfiguration, for mapping the above websocket handler 
-to a specific URL (http://localhost:8080/echo in this case)::
+to a specific URL (http://localhost:8080/echo in this case):
+
+.. code-block:: java
 
    import org.kurento.jsonrpc.internal.server.config.JsonRpcConfiguration ; 
    import org.kurento.jsonrpc.server.JsonRpcConfigurer ; 
@@ -104,7 +108,9 @@ When registering a particular handler, there are a number of properties that can
 Reacting to connection events
 *****************************
 
-The handler offers the possibility to override some methods related to connection events. The methods available are::
+The handler offers the possibility to override some methods related to connection events. The methods available are:
+
+.. code-block:: java
 
    import org.kurento.jsonrpc.DefaultJsonRpcHandler ; 
    import com.google.gson.JsonObject ; 

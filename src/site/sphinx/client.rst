@@ -17,7 +17,9 @@ Creating a client
 
 Contrary to the server, the client is framework-agnostic, so it can be used in regular Java applications, Java EE, Spring… Creating a client 
 that will send requests to a certain server is very straightforward. The URI of the server is passed to the *JsonRpcClientWebSocket* in the constructor, 
-here assuming that it is deployed in the same machine::
+here assuming that it is deployed in the same machine:
+
+.. code-block:: java
 
    JsonRpcClient client = new JsonRpcClientWebSocket("ws://localhost:8080/echo");
 
@@ -35,7 +37,9 @@ A JSON-RPC call is represented by sending a Request object to a Server. Such obj
 From all these members, users only have to set the "method" and the "params", as the other two are managed by the library. 
 
 The server defined in the previous section expects a JsonObject, and answers to the *echo* method only, bouncing back the "params" in the request. It is expected that 
-the response to *client.sendRequest(request)* will be the wrapped *params* in the *Response<JsonElement>* object that the Server sends back to the client::
+the response to *client.sendRequest(request)* will be the wrapped *params* in the *Response<JsonElement>* object that the Server sends back to the client:
+
+.. code-block:: java
 
    Request <JsonObject> request = new Request<>();
    request. setMethod("echo");
@@ -80,7 +84,9 @@ Adding connection listeners
 
 The client offers the possibility to set-up a listener for certain connection events. A user can define a **JsonRpcWSConnectionListener** that offers overrides of certain 
 methods. Once the connection listener is defined, it can be passed in the constructor of the client, and the client will invoke the methods once the corresponding 
-events are produced::
+events are produced:
+
+.. code-block:: java
 
    JsonRpcWSConnectionListener listener = new JsonRpcWSConnectionListener() { 
                

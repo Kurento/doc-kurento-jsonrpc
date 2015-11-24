@@ -11,8 +11,9 @@ JsonRpcClient
 Create client
 *************
 
-For creating a client that will send requests, you need to create a configuration object like in the next example::
+For creating a client that will send requests, you need to create a configuration object like in the next example:
 
+.. code-block:: javascript
 
    var configuration = {
          hearbeat: 5000,
@@ -38,7 +39,9 @@ For creating a client that will send requests, you need to create a configuratio
 This configuration object has several options: in one hand, the configuration about transport on the other hand the configuration about methods that the client has to 
 call when get a response. Also, it can configure the interval for each heartbeat and if you want send a message before closing the connection. 
 
-* **Configuration**::
+* **Configuration**
+
+.. code-block:: javascript
 
    {
        heartbeat: interval in ms for each heartbeat message,
@@ -73,7 +76,8 @@ A JSON-RPC call is represented by sending a Request object to a Server using sen
 * **params**: A Structured value that holds the parameter values to be used during the invocation of the method. This member may be omitted, and the type comes defined by the server. It is a json object.
 * **callback**: A method with error and response. This method is called when the request is ended.
 
-::
+
+.. code-block:: javascript
 
    var params = { 
                 interval: 5000 
@@ -130,15 +134,15 @@ It is based on states and calls methods when any of next situation happens:
 
 It has a configuration object like next example and this object is part of jsonrpc client’s configuration object. 
 
-::
+.. code-block:: javascript
 
    {
-   uri: URItoconntectto,
-   useSockJS: true(useSockJS)/false(useWebSocket)bydefault,
-   onconnected: callback method to invoke when connection is successful,
-   ondisconnect: callback method to invoke when the connection is lost,
-   onreconnecting: callback method to invoke when the client is reconnecting,
-   onreconnected: callback method to invoke when the client succesfully reconnects 
+      uri: URItoconntectto,
+      useSockJS: true(useSockJS)/false(useWebSocket)bydefault,
+      onconnected: callback method to invoke when connection is successful,
+      ondisconnect: callback method to invoke when the connection is lost,
+      onreconnecting: callback method to invoke when the client is reconnecting,
+      onreconnected: callback method to invoke when the client succesfully reconnects 
    }
 
 
