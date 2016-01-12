@@ -82,7 +82,7 @@ Session control
 
 Each client connecting to this server, will be assigned a unique sessionId. This provides a session concept, that can expand through several websocket sessions. 
 Having this notion of JSON-RPC session, allows to bind a set of properties to one particular session. This gives the developers implementing a server the capability
- of having a stateful server session, which the user can recover once reconnected. The methods available in this object are
+of having a stateful server session, which the user can recover once reconnected. The methods available in this object are
  
 * **getSessionId**: The ID assigned to this session. It can be used to track down the session, and register it in servers and map it to other resources.
 * **getRegisterInfo**: This is set by the client upon connection, and it is accessible by the server through this method.
