@@ -309,3 +309,7 @@ todo_include_todos = 'dev'
 
 # linkcheck, jboss forbids us
 linkcheck_ignore = [r'http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm']
+
+rst_epilog = """ 
+.. |SPRING_BOOT_VERSION| replace:: 1.3.0.RELEASE
+"""

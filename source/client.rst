@@ -4,12 +4,14 @@ Json-Rpc Client
 
 This is the Java client of the kurento-jsonrpc-server, or any other websocket server that implements the :term:`JSON-RPC` protocol. It allows a Java program to make 
 JSON-RPC calls to the kurento-jsonrpc-server. Is also published as a Maven `dependency <https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22kurento-jsonrpc-client%22>`_, 
-to be added to the project’s pom::
+to be added to the project’s pom:
+
+.. code-block:: xml
 
    <dependency>
        <groupId>org.kurento</groupId>
-       <artifactId>kurento-jsonrpc-client</artifactId>
-       <version>6.1.0</version> <!-- This might not be the latest version! -->
+       <artifactId>kurento-jsonrpc-server</artifactId>
+       <version>|KURENTO_JAVA_VERSION|</version>
    </dependency>
 
 Creating a client
@@ -41,8 +43,8 @@ the response to *client.sendRequest(request)* will be the wrapped *params* in th
 
 .. code-block:: java
 
-   Request <JsonObject> request = new Request<>();
-   request. setMethod("echo");
+   Request<JsonObject> request = new Request<>();
+   request.setMethod("echo");
    JsonObject params = new JsonObject(); 
    params.addProperty("some property", "Some Value");
    request.setParams(params);

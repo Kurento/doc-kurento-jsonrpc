@@ -1,6 +1,26 @@
-%%%%%%%%%%%%%%%
-Json-Rpc Server
-%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Securing Json-Rpc connections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 This is a :term:`JAVA` implementation of a :term:`JSON-RPC` server. It supports v2.0 only, which implies that Notifications can be used. 
 However, the only possible transport is Websockets. It is published as a `Maven artifact <https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22kurento-jsonrpc-server%22>`_, 
