@@ -87,3 +87,9 @@ or W3C relevant documents. Some of the terms are specific to :term:`kurento`.
         `WebSocket <https://www.websocket.org/>`__ specification (developed as
         part of the HTML5 initiative) defines a full-duplex single socket
         connection over which messages can be sent between client and server.
+
+    WSS
+    WebSockets Secure
+        `WebSocket <https://www.websocket.org/>`__ specification (developed as
+        part of the HTML5 initiative) defines a full-duplex single socket
+        connection over which messages can be sent between client and server.
