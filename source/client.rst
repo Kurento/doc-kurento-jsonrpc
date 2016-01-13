@@ -133,5 +133,7 @@ Not only the ping message interval is configurable. Other configurable timeouts 
 * **Idle timeout**: If no message is sent during a certain period, the connection is considered idle and closed.
 * **Request timeout**: the server should answer the request under a certain response time. If the message is not answered in that time, the request is assumed not to be received by the server, and the client yields a TransportException
 
+JavaDoc
+-------
 
-
+* `kurento-jsonrpc-client <./langdoc/kurento-jsonrpc-client/index.html>`_

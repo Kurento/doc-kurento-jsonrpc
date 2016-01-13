@@ -188,3 +188,8 @@ shows how a notification to a particular client would be sent
       throws IOException {
     handler.sessions.get(clientId).sendNotification(method, params);
   }
+
+JavaDoc
+-------
+
+* `kurento-jsonrpc-server <./langdoc/kurento-jsonrpc-server/index.html>`_
